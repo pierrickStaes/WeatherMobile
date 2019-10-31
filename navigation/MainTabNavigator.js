@@ -1,14 +1,12 @@
-import HomePage from '../pages/HomePage';
+import CapturePage from '../pages/CapturePage';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-import SettingsPage from '../pages/SettingsPage';
-import FavoritesPage from '../pages/FavoritesPage';
+import PokedexPage from '../pages/PokedexPage';
+import EquipePage from '../pages/EquipePage';
 import Icon from 'react-native-vector-icons/Ionicons';
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
-import AddFavoritesPage from '../pages/AddFavoritesPage';
-import { connect } from 'react-redux';
 
-const FavoritesNavigator = createStackNavigator(
+/*const FavoritesNavigator = createStackNavigator(
     {
         FavoritesPage: {
             screen: FavoritesPage
@@ -26,34 +24,34 @@ const FavoritesNavigator = createStackNavigator(
             headerTintColor: 'white'
         }
     }
-)
+)*/
 
 const tabNavigator = createMaterialBottomTabNavigator(
     {
-        Home: {
-            screen: HomePage,
+        Equipe: {
+            screen: EquipePage,
             navigationOptions: {
-                tabBarLabel:'Accueil',
+                tabBarLabel:'Equipe',
                 tabBarIcon:({tintColor})=> (
                     <Icon style={[{color: tintColor}]} size ={25} name ={'ios-home'} />
                 ),
                 barStyle: {backgroundColor: '#496c89'}
             }
         },
-        FavoritesPage: {
-            screen: FavoritesNavigator,
+        Capture: {
+            screen: CapturePage,
             navigationOptions: {
-                tabBarLabel:'Favoris',
+                tabBarLabel:'Capture',
                 tabBarIcon:({tintColor})=> (
                     <Icon style={[{color: tintColor}]} size ={25} name ={'ios-star'} />
                 ),
                 barStyle: {backgroundColor: '#496c89'}
             }
         },
-        Settings: {
-            screen : SettingsPage,
+        Pokedex: {
+            screen : PokedexPage,
             navigationOptions: {
-                tabBarLabel:'Paramètres',
+                tabBarLabel:'Pokedex',
                 tabBarIcon:({tintColor})=> (
                     <Icon style={[{color: tintColor}]} size ={25} name ={'ios-settings'} />
                 ),
@@ -62,7 +60,7 @@ const tabNavigator = createMaterialBottomTabNavigator(
         }
     },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'Equipe',
         activeColor:'#7cbac2',
         inactiveColor:'#3684c5',
         labelStyle: {textAlign: 'center'}

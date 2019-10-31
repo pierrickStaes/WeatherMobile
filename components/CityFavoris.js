@@ -3,17 +3,14 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 import { ListItem } from 'react-native-elements';
 import PropTypes from 'prop-types';
-import WeatherService from '../services/weather-services';
 import {SwipeRow} from 'react-native-swipe-list-view';
 
 class CityFavoris extends React.Component{
 
-    static propTypes = {
+    /*static propTypes = {
         tab: PropTypes.object.isRequired,
         onDelete: PropTypes.func.isRequired
     };
-
-    serv = new WeatherService();
 
     state = {
         weather : null
@@ -29,14 +26,14 @@ class CityFavoris extends React.Component{
 
     render(){
         return(
-            /*<View key={this.props.data} style={{ flex:1, flexDirection: 'row', justifyContent: 'space-between'}}>
+            <View key={this.props.data} style={{ flex:1, flexDirection: 'row', justifyContent: 'space-between'}}>
                 <Text>{this.props.data}</Text>
                 {this.state.weather !== null ? (
                     <View style={{ flex:1, flexDirection: 'row', justifyContent: 'space-between'}}>
                         <Text>{this.state.weather.main.temp}</Text>
                     </View>
                 )}
-            </View>*/
+            </View>
             this.state.weather !== null ? (
             <SwipeRow disableRightSwipe={true} leftOpenValue={0} rightOpenValue={-100}>
                 <View style={style.standaloneRowBack}>
@@ -55,7 +52,7 @@ class CityFavoris extends React.Component{
             </SwipeRow>
              ):(<Text></Text>)
         );
-    }
+    }*/
 }
 
 const style = StyleSheet.create({

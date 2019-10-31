@@ -1,10 +1,9 @@
-import {SEARCH_WEATHER} from '../actions/weatherServiceAction';
+const INITIAL_STATE = {
+  serv : null
+}
 
-function weatherServiceReducer(state = initialState={weather:null}, action) {
-    if (action.type === SEARCH_WEATHER) {
-      return action.paylord
-    }
-    return state;
+function weatherServiceReducer(state = INITIAL_STATE, action) {
+  return state;
 }
 
 export default weatherServiceReducer;
